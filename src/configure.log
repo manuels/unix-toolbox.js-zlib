@@ -1,0 +1,220 @@
+--------------------
+./configure
+So 10. Feb 19:28:41 CET 2013
+
+=== ztest27103.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+/home/manuel/Projekte/emscripten/emcc -c ztest27103.c
+... using /home/manuel/Projekte/emscripten/emcc
+
+Checking for shared library support...
+=== ztest27103.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+/home/manuel/Projekte/emscripten/emcc -w -c ztest27103.c
+/home/manuel/Projekte/emscripten/emcc -o ztest27103.so ztest27103.o
+clang: warning: argument unused during compilation: '-nostdinc'
+clang: warning: argument unused during compilation: '-Xclang -nobuiltininc'
+clang: warning: argument unused during compilation: '-Xclang -nostdsysteminc'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/local/include'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/emscripten'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/bsd'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/libc'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/libcxx'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/lib/libcxxabi/include'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/gfx'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/net'
+clang: warning: argument unused during compilation: '-Xclang -isystem/home/manuel/Projekte/emscripten/system/include/SDL'
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 0 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 1 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 2 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 3 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 4 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 5 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 6 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 7 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 8 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 9 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 10 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 11 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 12 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 13 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 14 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 15 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 16 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 17 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 18 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 19 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 20 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 21 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_info): relocation 22 has invalid symbol index 22
+/usr/bin/ld: /usr/lib/debug/usr/lib/i386-linux-gnu/crt1.o(.debug_line): relocation 0 has invalid symbol index 2
+/usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+(exit code 1)
+No shared library support; try without defining CC and CFLAGS
+Building static library libz.a version 1.2.7 with /home/manuel/Projekte/emscripten/emcc.
+
+
+=== ztest27103.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+/home/manuel/Projekte/emscripten/emcc -c -D_LARGEFILE64_SOURCE=1 ztest27103.c
+ztest27103.c:2:1: error: unknown type name 'off64_t'; did you mean '_off64_t'?
+off64_t dummy = 0;
+^~~~~~~
+_off64_t
+/home/manuel/Projekte/emscripten/system/include/libc/sys/_types.h:36:32: note: '_off64_t' declared here
+__extension__ typedef unsigned _off64_t; /* XXX Emscripten */
+                               ^
+1 error generated.
+(exit code 1)
+Checking for off64_t... No.
+
+=== ztest27103.c ===
+#include <stdio.h>
+int main(void) {
+  fseeko(NULL, 0, 0);
+  return 0;
+}
+===
+/home/manuel/Projekte/emscripten/emcc -o ztest27103 ztest27103.c
+Checking for fseeko... Yes.
+
+=== ztest27103.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+/home/manuel/Projekte/emscripten/emcc -o ztest27103 ztest27103.c
+/tmp/ztest27103-vW4uBM.o: In function `main':
+ztest27103.c:(.text+0xe): undefined reference to `__errno'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+(exit code 1)
+Checking for strerror... No.
+
+=== ztest27103.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+/home/manuel/Projekte/emscripten/emcc -c -DNO_STRERROR ztest27103.c
+Checking for unistd.h... Yes.
+
+=== ztest27103.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+/home/manuel/Projekte/emscripten/emcc -c -DNO_STRERROR ztest27103.c
+Checking for stdarg.h... Yes.
+
+=== ztest27103.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+/home/manuel/Projekte/emscripten/emcc -c -DNO_STRERROR ztest27103.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest27103.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/manuel/Projekte/emscripten/emcc -DNO_STRERROR -o ztest27103 ztest27103.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest27103.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/manuel/Projekte/emscripten/emcc -c -DNO_STRERROR ztest27103.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest27103.c ===
+#include <stdio.h>
+#define is32(n,t) for(n=1,k=0;n;n<<=1,k++);if(k==32){puts(t);return 0;}
+int main() {
+    int k;
+    unsigned i;
+    unsigned long l;
+    unsigned short s;
+    is32(i, "unsigned")
+    is32(l, "unsigned long")
+    is32(s, "unsigned short")
+    return 1;
+}
+===
+/home/manuel/Projekte/emscripten/emcc -DNO_STRERROR ztest27103.c -o ztest27103
+Looking for a four-byte integer type... Found.
+
+ALL = static
+AR = /home/manuel/Projekte/emscripten/emar
+ARFLAGS = rc
+CC = /home/manuel/Projekte/emscripten/emcc
+CFLAGS = -DNO_STRERROR
+CPP = /home/manuel/Projekte/emscripten/emcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS =
+LDSHARED = /home/manuel/Projekte/emscripten/emcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = /home/manuel/Projekte/emscripten/emranlib
+SFLAGS = -DNO_STRERROR
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic
+VER = 1.2.7
+Z_U4 = unsigned
+exec_prefix = ${prefix}
+includedir = ${prefix}/include
+libdir = ${exec_prefix}/lib
+mandir = ${prefix}/share/man
+prefix = /usr/local
+sharedlibdir = ${libdir}
+uname = Linux 3.5.0-23-generic
+--------------------
+
+
